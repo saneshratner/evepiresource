@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>PI Abundance Project</title>
+</head>
+<body>
+<h1>PI Abundance Project</h1>
+
+Setup your screen:
+<ol>
+  <li>Enter Planet Mode
+  <li>Click on the Scan (Tab?) 
+  <li>Take a snapshot (PrintScr (PC/Linux), Cmd-Alt-3 (Mac))
+</ol>
+
+<form action="abundance_estimate.cgi">
+   <table>
+    <tr>     <td>Snapshot File: </td><td><input type=file name="snapfile"></td>  </tr>
+    <tr>  <td>Sec Stat: </td> <td> <input type=text size=5 name="secstat"> </td> </tr>
+    <tr>  <td>Planet: </td><td> <input type=text size=50 name="planetname"> </td> </tr>
+    <tr>  <td>Type: </td> <td> 
+  <select name="planettype"> 
+     <option>Barren</option>
+     <option>Oceanic</option>
+  </select>
+    <tr> <td> <input type="submit" name="submit"> </td> <td> </td> </tr>
+   </table>
+
+</body>
+</html>
