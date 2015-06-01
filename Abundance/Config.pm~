@@ -1,0 +1,15 @@
+#!/usr/bin/perl -w
+
+
+use strict;
+
+package Abundance::Image;
+
+use base 'Exporter';
+our @EXPORT_OK = qw ( debug_level );
+
+our $debug_level = 5;
+
+sub debug_level {
+    return $debug_level;
+}

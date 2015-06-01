@@ -1,0 +1,21 @@
+#!/usr/bin/perl -w
+
+
+use strict;
+
+package Abundance::Database;
+
+use base 'Exporter';
+our @EXPORT_OK = qw ( debug_level );
+
+
+use Abundance::Config;
+
+
+my ($dsn, $dbuser, $dbpass) = 
+    ($Abundance::Config::dsn
+     , $Abundance::Config::dbpass
+     , $Abundance::Config::dbuser  );
+
+my $dbh;
+
