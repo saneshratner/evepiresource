@@ -18,8 +18,8 @@ use Abundance::EVEData;
 
 my ($dsn, $dbuser, $dbpass) = 
     ($Abundance::Config::dsn
-     , $Abundance::Config::dbpass
-     , $Abundance::Config::dbuser  );
+     , $Abundance::Config::dbuser
+     , $Abundance::Config::dbpass  );
 
 my $dbh;
 
@@ -53,9 +53,13 @@ our %resource_col_names = (
 #  Connect to database
 
 sub connect {
-    $dbh = DBI->connect($dsn,$dbuser,$dbpass);
+    if ( $dbh = DBI->connect($dsn,$dbuser,$dbpass) ) {
+	prep ($dbh);
+    }
+    else {
+	die ("Abundance::Database::connect: Failed to connect to database $dsn\n");
+    }
 
-    prep ($dbh);
     return $dbh;
 }
 

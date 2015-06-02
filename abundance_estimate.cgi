@@ -12,7 +12,7 @@ use lib '.';
 
 use Abundance::Config qw ( debug_level );
 use Abundance::Image qw (extract_image extract_image_file);
-use Abundance::Database qw ( connect planet_info_name planet_info_id get_planets_in_system );
+use Abundance::Database qw ( connect planet_info_name planet_info_id get_planets_in_system eve_id_to_name );
 use Abundance::EVEData;
 
 
@@ -549,7 +549,7 @@ else {
 
 
 		
-		if ( defined ($rowhr = stats_for ($planet_type_id, $secclass, $resname) ) ) {
+		if ( defined ($rowhr = Abundance::Database::stats_for ($planet_type_id, $secclass, $resname) ) ) {
 		    $resource_stats[$i] = sprintf ("<div style=\"font-size:smaller\">%d-%d, avg %5.2f +/- %5.2f (%d samples)</div>", 
 					    $rowhr->{min}, $rowhr->{max},
 					    $rowhr->{mean}, $rowhr->{stddev}, 

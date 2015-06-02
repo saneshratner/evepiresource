@@ -124,7 +124,8 @@ sub extract_image ( $ ) {
     #  Constants determined empirically on 1280x1024
     my $res_row_height = 24;   # How tall is a resource line
     my $first_res_row = 118;   # How far down from (0,0) of the cropped image is the first resource line
-    my $resource_width = 135;  # How many columns in a resource line
+    #my $resource_width = 135;  # How many columns in a resource line
+    my $resource_width = 111;  # How many columns in a resource line
     #my $top_to_build_dist = 44;  # How far from the top of the block to the Build button top.
     my $top_to_build_dist = 55;  # How far from the top of the block to the Scale row.
     #my $dock_rows = 14;   # Each line of "Docked in" is another 14 rows
