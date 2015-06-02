@@ -460,6 +460,7 @@ else {
 	
 	    my $snap_fh = $query->upload ('snapfile');
 	    my $resblockfile = undef;
+	    my $resource_valuesref;
 	    my $success = 0;
 	    
 	    if ( defined $snap_fh ) {

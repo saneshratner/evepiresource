@@ -194,11 +194,11 @@ Algo Seq:
 	$preview->Display();
 
 	printf (STDERR "Preview Sharpen\n");
-	my $preview = $image->Preview ('Sharpen');
+	$preview = $image->Preview ('Sharpen');
 	$preview->Display();
 
 	printf (STDERR "Preview ReduceNoise\n");
-	my $preview = $image->Preview ('ReduceNoise');
+	$preview = $image->Preview ('ReduceNoise');
 	$preview->Display();
 	}
     }
